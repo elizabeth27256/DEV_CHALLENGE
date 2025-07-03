@@ -7,21 +7,45 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const formData = new FormData(this);
-  const data = {};
+  const dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado"];
+  const data = {
+    horarios: {}
+  };
 
-  if (document.getElementById("lunes").checked) {
-    data["lunes"] = {
-      entrada: formData.get("entrada-lunes"),
-      salida: formData.get("salida-lunes")
-    };
-  }
+  let algunoMarcado = false;
 
-  console.log("Datos enviados:", data);
+  dias.forEach(dia => {
+    const checkbox = document.getElementById(dia);
+    if (checkbox && checkbox.checked) {
+      algunoMarcado = true;
+      data.horarios[dia] = {
+        entrada: formData.get(`entrada-${dia}`),
+        salida: formData.get(`salida-${dia}`)
+      };
+    }
+  });
 
   const resultado = document.getElementById("resultado");
-  resultado.textContent = "Horario del lunes guardado correctamente.";
-  resultado.classList.remove("d-none");
+
+  if (!algunoMarcado) {
+    resultado.textContent = "Selecciona al menos un día y completa los horarios.";
+    resultado.classList.remove("d-none", "alert-success");
+    resultado.classList.add("alert-warning");
+    return;
+  }
+
+  resultado.innerHTML = `
+    <strong>Horarios guardados correctamente:</strong>
+    <pre>${JSON.stringify(data.horarios, null, 2)}</pre>
+  `;
+  resultado.classList.remove("d-none", "alert-warning");
+  resultado.classList.add("alert-success");
 
   this.reset();
-  document.getElementById("horario-lunes").classList.add("d-none");
+  dias.forEach(d => {
+    const horarioDiv = document.getElementById(`horario-${d}`);
+    if (horarioDiv) {
+      horarioDiv.classList.add("d-none");
+    }
+  });
 });

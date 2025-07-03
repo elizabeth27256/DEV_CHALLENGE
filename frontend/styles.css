@@ -2,7 +2,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0774c2;
+  background-color: #3D90D7;
   color: #222;
   min-height: 100vh;
   display: flex;
@@ -12,7 +12,7 @@ body {
 }
 
 h2 {
-  color: #003366;
+  color: #222;
   margin-bottom: 18px;
   text-align: center;
   letter-spacing: 1px;
@@ -74,6 +74,8 @@ button[type="submit"]:hover {
 .error:empty {
   display: none;
 }
+
+
 
 
 @media (max-width: 600px) {
