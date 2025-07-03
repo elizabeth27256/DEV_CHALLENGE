@@ -75,7 +75,7 @@ button[type="submit"]:hover {
   display: none;
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
   form {
     padding: 16px 6px 14px 6px;
