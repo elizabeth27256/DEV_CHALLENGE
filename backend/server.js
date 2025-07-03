@@ -1,14 +1,32 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import registroRuta from '../backend/register.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import registroRuta from './routes/register.js';
+import loginRuta from './routes/login.js';
 
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use('/api', registroRuta);
+const frontendPath = path.join(__dirname, '../frontend');
+app.use(express.static(frontendPath));
 
-app.listen(3000, () => {
-  console.log('Servidor inicializado en http://localhost:3000');
+app.get('/', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'login.html'));
+});
+
+// Rutas API
+app.use('/api', registroRuta);
+app.use('/api', loginRuta);
+
+// Puerto
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
