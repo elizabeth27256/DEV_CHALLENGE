@@ -30,15 +30,24 @@ form {
   width: 100%;
 }
 
-input {
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input,
+select {
   padding: 10px;
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #b3c6e0;
   transition: border 0.2s;
+  width: 100%;
 }
 
-input:focus {
+input:focus,
+select:focus {
   outline: 2px solid #ffd700;
   border-color: #ffd700;
 }
@@ -71,19 +80,19 @@ button[type="submit"]:hover {
   margin-bottom: 4px;
   min-height: 22px;
 }
+
 .error:empty {
   display: none;
 }
 
+select option {
+  padding: 6px;
+}
 
-
-
-@media (max-width: 600px) {
-  form {
-    padding: 16px 6px 14px 6px;
-    max-width: 98vw;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
+select optgroup {
+  font-weight: bold;
+  background-color: #f5f8ff;
+  color: #003366;
+  padding-top: 4px;
+  padding-bottom: 2px;
 }

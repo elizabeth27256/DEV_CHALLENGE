@@ -22,10 +22,12 @@
               <label class="form-check-label" for="lunes">Lunes</label>
               <div id="horario-lunes" class="row g-2 mt-1 d-none ms-3">
                 <div class="col">
-                  <input type="time" name="entrada-lunes" class="form-control" />
+                  <label for="entrada-lunes" class="form-label">Hora de entrada</label>
+                  <input type="time" name="entrada-lunes" id="entrada-lunes" class="form-control" />
                 </div>
                 <div class="col">
-                  <input type="time" name="salida-lunes" class="form-control" />
+                  <label for="salida-lunes" class="form-label">Hora de salida</label>
+                  <input type="time" name="salida-lunes" id="salida-lunes" class="form-control" />
                 </div>
               </div>
             </div>
@@ -35,10 +37,12 @@
               <label class="form-check-label" for="martes">Martes</label>
               <div id="horario-martes" class="row g-2 mt-1 d-none ms-3">
                 <div class="col">
-                  <input type="time" name="entrada-martes" class="form-control" />
+                  <label for="entrada-martes" class="form-label">Hora de entrada</label>
+                  <input type="time" name="entrada-martes" id="entrada-martes" class="form-control" />
                 </div>
                 <div class="col">
-                  <input type="time" name="salida-martes" class="form-control" />
+                  <label for="salida-martes" class="form-label">Hora de salida</label>
+                  <input type="time" name="salida-martes" id="salida-martes" class="form-control" />
                 </div>
               </div>
             </div>
@@ -48,10 +52,12 @@
               <label class="form-check-label" for="miercoles">Miércoles</label>
               <div id="horario-miercoles" class="row g-2 mt-1 d-none ms-3">
                 <div class="col">
-                  <input type="time" name="entrada-miercoles" class="form-control" />
+                  <label for="entrada-miercoles" class="form-label">Hora de entrada</label>
+                  <input type="time" name="entrada-miercoles" id="entrada-miercoles" class="form-control" />
                 </div>
                 <div class="col">
-                  <input type="time" name="salida-miercoles" class="form-control" />
+                  <label for="salida-miercoles" class="form-label">Hora de salida</label>
+                  <input type="time" name="salida-miercoles" id="salida-miercoles" class="form-control" />
                 </div>
               </div>
             </div>
@@ -61,10 +67,12 @@
               <label class="form-check-label" for="jueves">Jueves</label>
               <div id="horario-jueves" class="row g-2 mt-1 d-none ms-3">
                 <div class="col">
-                  <input type="time" name="entrada-jueves" class="form-control" />
+                  <label for="entrada-jueves" class="form-label">Hora de entrada</label>
+                  <input type="time" name="entrada-jueves" id="entrada-jueves" class="form-control" />
                 </div>
                 <div class="col">
-                  <input type="time" name="salida-jueves" class="form-control" />
+                  <label for="salida-jueves" class="form-label">Hora de salida</label>
+                  <input type="time" name="salida-jueves" id="salida-jueves" class="form-control" />
                 </div>
               </div>
             </div>
@@ -74,10 +82,12 @@
               <label class="form-check-label" for="viernes">Viernes</label>
               <div id="horario-viernes" class="row g-2 mt-1 d-none ms-3">
                 <div class="col">
-                  <input type="time" name="entrada-viernes" class="form-control" />
+                  <label for="entrada-viernes" class="form-label">Hora de entrada</label>
+                  <input type="time" name="entrada-viernes" id="entrada-viernes" class="form-control" />
                 </div>
                 <div class="col">
-                  <input type="time" name="salida-viernes" class="form-control" />
+                  <label for="salida-viernes" class="form-label">Hora de salida</label>
+                  <input type="time" name="salida-viernes" id="salida-viernes" class="form-control" />
                 </div>
               </div>
             </div>
@@ -87,13 +97,60 @@
               <label class="form-check-label" for="sabado">Sábado</label>
               <div id="horario-sabado" class="row g-2 mt-1 d-none ms-3">
                 <div class="col">
-                  <input type="time" name="entrada-sabado" class="form-control" />
+                  <label for="entrada-sabado" class="form-label">Hora de entrada</label>
+                  <input type="time" name="entrada-sabado" id="entrada-sabado" class="form-control" />
                 </div>
                 <div class="col">
-                  <input type="time" name="salida-sabado" class="form-control" />
+                  <label for="salida-sabado" class="form-label">Hora de salida</label>
+                  <input type="time" name="salida-sabado" id="salida-sabado" class="form-control" />
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="sector" class="form-label">Selecciona sector:</label>
+            <select name="sector" id="sector" class="form-select" required>
+              <option value="" disabled selected>Selecciona tu sector</option>
+              <optgroup label="Centro de Quito">
+                <option value="Centro Histórico">Centro Histórico</option>
+                <option value="San Marcos">San Marcos</option>
+                <option value="La Marín">La Marín</option>
+                <option value="Itchimbía">Itchimbía</option>
+                <option value="El Tejar">El Tejar</option>
+                <option value="El Panecillo">El Panecillo</option>
+              </optgroup>
+              <optgroup label="Norte de Quito">
+                <option value="La Carolina">La Carolina</option>
+                <option value="Iñaquito">Iñaquito</option>
+                <option value="El Inca">El Inca</option>
+                <option value="Kennedy">Kennedy</option>
+                <option value="Jipijapa">Jipijapa</option>
+                <option value="Cotocollao">Cotocollao</option>
+                <option value="Carcelén">Carcelén</option>
+                <option value="El Condado">El Condado</option>
+              </optgroup>
+              <optgroup label="Sur de Quito">
+                <option value="Chimbacalle">Chimbacalle</option>
+                <option value="Solanda">Solanda</option>
+                <option value="El Recreo">El Recreo</option>
+                <option value="La Magdalena">La Magdalena</option>
+                <option value="Quitumbe">Quitumbe</option>
+                <option value="El Calzado">El Calzado</option>
+                <option value="San Bartolo">San Bartolo</option>
+                <option value="La Ecuatoriana">La Ecuatoriana</option>
+              </optgroup>
+              <optgroup label="Valles y Periferia Urbana">
+                <option value="Cumbayá">Cumbayá</option>
+                <option value="Valle de los Chillos">Valle de los Chillos</option>
+                <option value="Tumbaco">Tumbaco</option>
+                <option value="Puembo">Puembo</option>
+                <option value="Conocoto">Conocoto</option>
+                <option value="Sangolquí">Sangolquí</option>
+                <option value="San Rafael">San Rafael</option>
+                <option value="Nayón">Nayón</option>
+              </optgroup>
+            </select>
           </div>
 
           <div class="text-end">
