@@ -15,7 +15,7 @@ Promover la seguridad y la comunidad entre los miembros de la PUCE mediante una 
 
 ## Tecnologías utilizadas
 
-- Frontend (HTML5, CSS, JavaScript)
+- Frontend (HTML, CSS, JavaScript)
 - Backend (Node.js)
 - Base de datos (MySQL, PostgreSQL)
 
