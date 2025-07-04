@@ -16,6 +16,7 @@
         const result = await res.json();
 
         if (res.ok) {
+          localStorage.setItem("usuario_id", result.usuario.id);
           window.location.href = "local_form.html"
         } else {
           mensajeError.textContent = result.mensaje;

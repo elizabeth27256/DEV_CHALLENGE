@@ -5,8 +5,11 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import registroRuta from './routes/register.js';
 import loginRuta from './routes/login.js';
+import horariosRuta from './routes/schedules.js';
+import coincidenciasRuta from './routes/coincidences.js';
 
 const app = express();
+app.use(express.json());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,6 +27,8 @@ app.get('/', (req, res) => {
 // Rutas API
 app.use('/api', registroRuta);
 app.use('/api', loginRuta);
+app.use('/api', horariosRuta);
+app.use('/api/coincidences', coincidenciasRuta);
 
 // Puerto
 const PORT = 3000;
