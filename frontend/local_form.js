@@ -19,13 +19,13 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
   dias.forEach(dia => {
     const checkbox = document.getElementById(dia);
     if (checkbox && checkbox.checked) {
-      algunoMarcado = true;  // Solo que esté marcado el día
+      algunoMarcado = true;  
 
       const entrada = formData.get(`entrada-${dia}`);
       const salida = formData.get(`salida-${dia}`);
 
       if (!entrada || !salida) {
-        error = true;  // Falta hora
+        error = true;  
       } else {
         data.horarios[dia] = { entrada, salida };
       }
