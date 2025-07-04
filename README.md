@@ -1,4 +1,4 @@
-# APP MatchUce para Coincidencias para Rutas Seguras Dev Challenge
+# APP MatchUce de Coincidencias para Rutas Seguras Dev Challenge
 
  Es una aplicación diseñada para estudiantes personal de la Pontificia Universidad Católica del Ecuador que buscan movilizarse de manera más segura hacia y desde el campus. La app permite generar coincidencias entre personas que comparten rutas similares, fomentando el acompañamiento seguro y la colaboración entre miembros de la comunidad PUCE.
 
