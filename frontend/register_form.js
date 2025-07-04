@@ -12,17 +12,7 @@ document.getElementById("formRegistro").addEventListener("submit", async functio
 
     mensajeError.textContent = "";
 
-    if (!correo.endsWith("@puce.edu.ec")) {
-      mensajeError.textContent = "El correo debe tener el dominio @puce.edu.ec.";
-      return;
-    }
-
-    if (contrasena !== repetirContrasena) {
-      mensajeError.textContent = "Las contraseñas no coinciden.";
-      return;
-    }
-
-    const datos = { nombres, cedula, correo, telefono, usuario, contrasena };
+    const datos = { nombres, cedula, correo, telefono, usuario, contrasena, repetirContrasena };
 
     try {
       const res = await fetch("http://localhost:3000/api/registrar", {
@@ -35,7 +25,7 @@ document.getElementById("formRegistro").addEventListener("submit", async functio
 
       if (res.ok) {
         alert("¡Registro exitoso!");
-        this.reset();
+        window.location.href = "/";
       } else {
         mensajeError.textContent = result.mensaje || "Error en el registro.";
       }

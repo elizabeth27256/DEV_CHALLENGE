@@ -16,9 +16,7 @@
         const result = await res.json();
 
         if (res.ok) {
-          alert("Inicio de sesión exitoso");
-          // Redirigir a la página principal (dashboard)
-          // window.location.href = "dashboard.html"; // por ejemplo
+          window.location.href = "local_form.html"
         } else {
           mensajeError.textContent = result.mensaje;
         }
