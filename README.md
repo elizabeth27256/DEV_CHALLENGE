@@ -1,4 +1,4 @@
-# APP MatchUce de Coincidencias para Rutas Seguras Dev Challenge
+![Captura de pantalla 2025-07-04 210225](https://github.com/user-attachments/assets/4e14c339-9fbb-4575-9df8-3144ea6bda2e)# APP MatchUce de Coincidencias para Rutas Seguras Dev Challenge
 
  Es una aplicación diseñada para estudiantes personal de la Pontificia Universidad Católica del Ecuador que buscan movilizarse de manera más segura hacia y desde el campus. La app permite generar coincidencias entre personas que comparten rutas similares, fomentando el acompañamiento seguro y la colaboración entre miembros de la comunidad PUCE.
 
@@ -23,11 +23,11 @@ Promover la seguridad y la comunidad entre los miembros de la PUCE mediante una 
 ## Cómo usar la app
 
 1. Regístrate con tus datos y correo institucional PUCE.
-   ![Captura de pantalla 2025-07-04 172138](https://github.com/user-attachments/assets/8597242e-a9fa-4895-b0ce-f9e61fd09fe2)
+  ![Captura de pantalla 2025-07-04 210225](https://github.com/user-attachments/assets/36f5626a-03ca-4e52-a9a9-6614ce640d21)
 2. Despues de registro logeate con tu usuario y contraseña.
-   ![Captura de pantalla 2025-07-04 172816](https://github.com/user-attachments/assets/6480204a-07f9-40fc-83a4-e77b87523825)
+  ![Captura de pantalla 2025-07-04 210242](https://github.com/user-attachments/assets/339e38ac-24cc-41d9-aceb-a6b801ac4659)
 3. Configura tu ruta frecuente y tu horario habitual.
-   ![Captura de pantalla 2025-07-04 172156](https://github.com/user-attachments/assets/500c7d56-0985-4134-bb4e-e0eaf52c06b3)
+  ![Captura de pantalla 2025-07-04 210235](https://github.com/user-attachments/assets/629467ea-42fb-4521-8e5a-e45b4998722a)
 4. La app buscará coincidencias con otros usuarios que compartan rutas y horarios similares.
 5. Conéctate con tus coincidencias y coordina tu trayecto seguro.
 
