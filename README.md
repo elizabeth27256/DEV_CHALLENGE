@@ -29,6 +29,7 @@ Promover la seguridad y la comunidad entre los miembros de la PUCE mediante una 
 3. Configura tu ruta frecuente y tu horario habitual.
   ![Captura de pantalla 2025-07-04 210235](https://github.com/user-attachments/assets/629467ea-42fb-4521-8e5a-e45b4998722a)
 4. La app buscará coincidencias con otros usuarios que compartan rutas y horarios similares.
+  ![image](https://github.com/user-attachments/assets/a181470d-e4f9-4a1d-be98-eb1b46760ac0)
 5. Conéctate con tus coincidencias y coordina tu trayecto seguro.
 
 ## En desarrollo
