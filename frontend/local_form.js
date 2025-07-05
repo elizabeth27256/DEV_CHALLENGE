@@ -1,6 +1,6 @@
 function toggleHorario(dia) {
   const div = document.getElementById(`horario-${dia}`);
-  div.classList.toggle("d-none");
+  div.classList.toggle("show");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,12 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!algunoMarcado) {
       resultado.textContent = "Selecciona al menos un día y completa los horarios.";
       resultado.className = "alert alert-warning mt-4";
+      resultado.classList.remove("d-none");
       return;
     }
 
     if (error) {
       resultado.textContent = "Por favor, completa las horas de entrada y salida para los días seleccionados.";
       resultado.className = "alert alert-warning mt-4";
+      resultado.classList.remove("d-none");
       return;
     }
 
@@ -52,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!usuario_id) {
       resultado.textContent = "No se ha iniciado sesión. Por favor, inicia sesión primero.";
       resultado.className = "alert alert-danger mt-4";
+      resultado.classList.remove("d-none");
       return;
     }
 
@@ -101,19 +104,22 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
         resultado.className = "alert alert-success mt-4";
+        resultado.classList.remove("d-none");
 
         this.reset();
         dias.forEach(d => {
           const horarioDiv = document.getElementById(`horario-${d}`);
-          if (horarioDiv) horarioDiv.classList.add("d-none");
+          if (horarioDiv) horarioDiv.classList.remove("show");
         });
       } else {
         resultado.textContent = result.mensaje || "Error al guardar horarios.";
         resultado.className = "alert alert-warning mt-4";
+        resultado.classList.remove("d-none");
       }
     } catch (err) {
       resultado.textContent = "No se pudo conectar al servidor.";
       resultado.className = "alert alert-danger mt-4";
+      resultado.classList.remove("d-none");
     }
   });
 });
