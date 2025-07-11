@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS horarios (
   dia VARCHAR(10) NOT NULL,
   hora_entrada TIME NOT NULL,
   hora_salida TIME NOT NULL,
+  sector VARCHAR(100) NOT NULL,
   usuario_id INTEGER NOT NULL,
   FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
 );
