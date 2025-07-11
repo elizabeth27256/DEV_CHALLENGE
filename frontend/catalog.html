@@ -6,10 +6,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="encabezado">
+    <h1 class="logo">MatchPUCE</h1>
+    <button class="btn-cerrar" id="btnCerrar">Cerrar sesión</button>
+  </header>
+
   <h2>Coincidencias de Horarios</h2>
   <div id="cartas" class="cartas-container"></div>
   <p id="mensaje"></p>
 
+  <div class="text-center">
+    <button id="nuevoHorarioBtn" class="btn-horario">
+      Registrar nuevo horario
+    </button>
+  </div>
   <script src="catalog.js"></script>
 </body>
 </html>

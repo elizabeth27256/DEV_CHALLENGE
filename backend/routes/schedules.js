@@ -42,4 +42,17 @@ router.post('/horarios', async (req, res) => {
   }
 });
 
+router.get('/horarios/:usuario_id', async (req, res) => {
+  const { usuario_id } = req.params;
+  try {
+    const { rows } = await db.query(
+      'SELECT 1 FROM horarios WHERE usuario_id = $1 LIMIT 1',
+      [usuario_id]
+    );
+    res.json({ existe: rows.length > 0 });
+  } catch (err) {
+    res.status(500).json({ mensaje: 'Error al verificar horarios', error: err.message });
+  }
+});
+
 export default router;

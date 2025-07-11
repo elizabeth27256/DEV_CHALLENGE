@@ -3,7 +3,29 @@ function toggleHorario(dia) {
   div.classList.toggle("show");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  const usuario_id = localStorage.getItem("usuario_id");
+  if (!usuario_id) {
+    window.location.href = "login.html";
+    return;
+  }
+
+  const forzar = localStorage.getItem("forzarHorario") === "1";
+  if (forzar) {
+    localStorage.removeItem("forzarHorario");
+  } else {
+    try {
+      const resp = await fetch(`http://localhost:3000/api/horarios/${usuario_id}`);
+      const info = await resp.json();
+      if (info.existe) {
+        window.location.href = "catalog.html";
+        return;
+      }
+    } catch (e) {
+      console.error("No se pudo verificar horarios:", e);
+    }
+  }
+
   const formulario = document.getElementById("formulario");
   const resultado = document.getElementById("resultado");
   const dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado"];

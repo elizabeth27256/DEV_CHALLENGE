@@ -36,3 +36,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error(err);
   }
 });
+
+document.getElementById("nuevoHorarioBtn").addEventListener("click", () => {
+  localStorage.setItem("forzarHorario", "1");   // ⬅️ flag temporal
+  window.location.href = "local_form.html";     // tu formulario
+});
+
+document.getElementById("nuevoHorarioBtn").addEventListener("click", () => {
+  window.location.href = "local_form.html";
+});
+
+document.getElementById("btnCerrar").addEventListener("click", () => {
+  localStorage.clear();
+  window.location.href = "login.html";
+});
