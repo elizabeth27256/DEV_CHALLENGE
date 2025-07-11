@@ -7,6 +7,7 @@ import registroRuta from './routes/register.js';
 import loginRuta from './routes/login.js';
 import horariosRuta from './routes/schedules.js';
 import coincidenciasRuta from './routes/coincidences.js';
+import 'dotenv/config';
 
 const app = express();
 app.use(express.json());
