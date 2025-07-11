@@ -7,7 +7,8 @@
       mensajeError.textContent = "";
 
       try {
-        const res = await fetch("http://localhost:3000/api/login", {
+        const API = 'https://dev-challenge-jxg9.onrender.com/api';
+        const res = await fetch(`${API}/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ usuario, contrasena })

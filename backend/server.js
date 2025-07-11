@@ -34,5 +34,5 @@ app.use('/api/coincidences', coincidenciasRuta);
 // Puerto
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en https://dev-challenge-jxg9.onrender.com/api`);
 });

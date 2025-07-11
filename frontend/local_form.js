@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     localStorage.removeItem("forzarHorario");
   } else {
     try {
-      const resp = await fetch(`http://localhost:3000/api/horarios/${usuario_id}`);
+      const API = 'https://dev-challenge-jxg9.onrender.com/api';
+      const resp = await fetch(`${API}/horarios/${usuario_id}`);
       const info = await resp.json();
       if (info.existe) {
         window.location.href = "catalog.html";
@@ -87,7 +88,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     };
 
     try {
-      const res = await fetch("http://localhost:3000/api/horarios", {
+      const API = 'https://dev-challenge-jxg9.onrender.com/api';
+      const res = await fetch(`${API}/horarios`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)

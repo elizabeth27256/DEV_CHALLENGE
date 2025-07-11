@@ -15,7 +15,8 @@ document.getElementById("formRegistro").addEventListener("submit", async functio
     const datos = { nombres, cedula, correo, telefono, usuario, contrasena, repetirContrasena };
 
     try {
-      const res = await fetch("http://localhost:3000/api/registrar", {
+      const API = 'https://dev-challenge-jxg9.onrender.com/api';
+      const res = await fetch(`${API}/registrar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datos)

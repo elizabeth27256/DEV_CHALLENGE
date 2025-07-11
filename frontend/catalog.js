@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const res = await fetch(`http://localhost:3000/api/coincidences/${usuario_id}`);
+    const API = 'https://dev-challenge-jxg9.onrender.com/api';
+    const res = await fetch(`${API}/coincidences/${usuario_id}`);
     const data = await res.json();
 
     if (data.coincidencias.length === 0) {
@@ -38,8 +39,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 document.getElementById("nuevoHorarioBtn").addEventListener("click", () => {
-  localStorage.setItem("forzarHorario", "1");   // ⬅️ flag temporal
-  window.location.href = "local_form.html";     // tu formulario
+  localStorage.setItem("forzarHorario", "1");
+  window.location.href = "local_form.html";
 });
 
 document.getElementById("nuevoHorarioBtn").addEventListener("click", () => {
